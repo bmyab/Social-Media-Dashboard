@@ -1,0 +1,50 @@
+$breakpoints: (
+  mobile: 600px,
+  tablet: 1024px,
+  laptop-sm: 1240px,
+  laptop: 1400px,
+  desktop-lg: 1800px
+);
+
+@mixin breakpoint($breakpoint, $direction) {
+
+  // Get the breakpoint value.
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+  
+  @if $direction == min {
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  }
+}
+.main__header{
+  @include breakpoint(tablet,min ){
+    padding-top: 5rem;
+    padding-block-end: 4rem;
+    hr{
+      display: none;
+    }
+    &::after{
+      height: 32vh;
+      border-radius: 2.5rem;
+    }
+
+    .toogle{
+      float: right;
+      margin: 0;
+    }
+  }
+}
+.main{
+  @include breakpoint(laptop,min ){
+    .socials{
+      justify-content: space-between;
+    }
+    .overview{
+      align-items: flex-start;
+      .overviews{
+        justify-content: space-between;
+      }
+    }
+  }
+}

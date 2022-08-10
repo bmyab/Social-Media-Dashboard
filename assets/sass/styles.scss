@@ -1,0 +1,33 @@
+@use 'components';
+@use 'globals';
+@use 'breakpoints';
+
+
+:root{
+  .light-theme{
+    --bg: hsl(0, 0%, 100%);
+    --bg-top:hsl(225, 100%, 98%);
+    --bg-card:hsl(227, 47%, 96%);
+    --title:hsl(230, 17%, 14%);
+    --follows:hsl(230, 17%, 14%);
+    --follows-t:hsl(230, 17%, 14%);
+    --follows-t1:hsl(228, 12%, 44%);
+    --follows-t2:hsl(228, 12%, 44%);
+    --filter: 0.97;
+
+
+  }
+  .dark-theme{
+   --bg:hsl(230, 17%, 14%);;
+   --bg-top:hsl(232, 19%, 15%);
+   --bg-card:hsl(228, 28%, 20%);
+   --title:hsl(0, 0%, 100%);
+   --follows:hsl(0, 0%, 100%);
+   --follows-t:hsl(228, 34%, 66%);
+   --follows-t1:hsl(228, 34%, 66%);
+   --follows-t2:hsl(0, 0%, 100%);
+   --filter: 1.35;
+
+
+  }
+}

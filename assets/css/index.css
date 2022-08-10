@@ -1,0 +1,311 @@
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 30rem;
+  padding: 2.5rem 8.5rem;
+  background-color: var(--bg-card);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: var(--follows-t);
+}
+.social:hover {
+  filter: brightness(var(--filter));
+}
+.social__title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.social__title .paragraph-m {
+  color: var(--follows-t1);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.social__follows {
+  text-align: center;
+}
+.social__follows .follows {
+  font-size: 5.5rem;
+  color: var(--follows);
+}
+.social__follows .follows__text {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.social__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-direction: row;
+  align-items: center;
+  color: hsl(163deg, 72%, 41%);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.social__footer .footer__text-m {
+  color: hsl(356deg, 69%, 56%);
+}
+.social::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  background-color: hsl(208deg, 92%, 53%);
+  top: 0;
+}
+
+.card__overview {
+  max-width: 30rem;
+  padding: 2.5rem 8.5rem;
+  background-color: var(--bg-card);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 30rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card__overview:hover {
+  filter: brightness(var(--filter));
+}
+.card__overview .card__col {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.card__overview .card__col:nth-of-type(2) {
+  align-items: end;
+}
+.card__overview .card__col .paragraph {
+  color: var(--follows-t);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.card__overview .card__col .card__number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--follows);
+}
+.card__overview .card__col .card__percentage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.2rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(163deg, 72%, 41%);
+}
+.card__overview .card__col .card__percentage .percentage-m {
+  color: hsl(356deg, 69%, 56%);
+}
+.card__overview .card__col .card__social {
+  margin-bottom: 2rem;
+  width: 20px;
+}
+
+.wrapper {
+  max-width: 136rem;
+  width: 90%;
+  margin-inline: auto;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  background-color: var(--bg);
+}
+
+.main__header {
+  padding-top: 2.5rem;
+  padding-inline: 2rem;
+  position: relative;
+}
+.main__header .title {
+  color: var(--title);
+}
+.main__header .follows {
+  color: var(--follows-t1);
+  font-weight: 700;
+}
+.main__header hr {
+  margin-block: 2rem;
+}
+.main__header .toogle {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 4rem;
+  color: var(--follows-t1);
+  font-weight: 700;
+  padding-inline: 0.2rem;
+  transition: 0.5s ease;
+}
+.main__header .toogle__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-end;
+  justify-content: center;
+  width: 40px;
+  height: 20px;
+  background-color: hsl(230deg, 22%, 74%);
+  border-radius: 2.5rem;
+  padding-inline: 0.3rem;
+}
+.main__header .toogle__content .selector {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+}
+.main__header .toogle__content.dark {
+  align-items: flex-start;
+  background: linear-gradient(90deg, hsl(210deg, 78%, 56%), hsl(146deg, 68%, 55%));
+}
+.main__header .toogle__content.dark .selector {
+  background-color: hsl(228deg, 28%, 20%);
+}
+.main__header:after {
+  content: "";
+  width: 100vw;
+  height: 25.5vh;
+  background-color: var(--bg-top);
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.main .socials {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-block: 4rem;
+}
+.main .socials .social-t::after {
+  background-color: hsl(203deg, 89%, 53%);
+}
+.main .socials .social-i {
+  padding: 2.5rem 9rem;
+}
+.main .socials .social-i::after {
+  background: linear-gradient(120deg, hsl(37deg, 97%, 70%), hsl(329deg, 70%, 58%));
+  background-color: none;
+}
+.main .socials .social-y::after {
+  background-color: hsl(348deg, 97%, 39%);
+}
+.main .overview {
+  margin-block: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.main .overview__title {
+  display: block;
+  color: var(--follows-t2);
+  padding-bottom: 4rem;
+}
+.main .overview .overviews {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .main__header {
+    padding-top: 5rem;
+    padding-block-end: 4rem;
+  }
+  .main__header hr {
+    display: none;
+  }
+  .main__header::after {
+    height: 32vh;
+    border-radius: 2.5rem;
+  }
+  .main__header .toogle {
+    float: right;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main .socials {
+    justify-content: space-between;
+  }
+  .main .overview {
+    align-items: flex-start;
+  }
+  .main .overview .overviews {
+    justify-content: space-between;
+  }
+}
+
+:root .light-theme {
+  --bg: hsl(0, 0%, 100%);
+  --bg-top:hsl(225, 100%, 98%);
+  --bg-card:hsl(227, 47%, 96%);
+  --title:hsl(230, 17%, 14%);
+  --follows:hsl(230, 17%, 14%);
+  --follows-t:hsl(230, 17%, 14%);
+  --follows-t1:hsl(228, 12%, 44%);
+  --follows-t2:hsl(228, 12%, 44%);
+  --filter: 0.97;
+}
+:root .dark-theme {
+  --bg:hsl(230, 17%, 14%);
+  --bg-top:hsl(232, 19%, 15%);
+  --bg-card:hsl(228, 28%, 20%);
+  --title:hsl(0, 0%, 100%);
+  --follows:hsl(0, 0%, 100%);
+  --follows-t:hsl(228, 34%, 66%);
+  --follows-t1:hsl(228, 34%, 66%);
+  --follows-t2:hsl(0, 0%, 100%);
+  --filter: 1.35;
+}
+
+/*# sourceMappingURL=index.css.map */
